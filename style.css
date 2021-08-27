@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    margin: O;
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
@@ -12,59 +11,99 @@
     right: 0;
     top: 0;
     width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
+    min-height: 100%;
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111;
+    background: rgb(255, 255, 255);
     color: rgb(236, 137, 24);
     z-index: 2;
 }
 
-.navbar {
+.navbarindex {
+    position: fixed;
     display: flex;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     align-items: center;
     z-index: 1000;
     color: rgb(236, 137, 24);
-    background-image: -o-linear-gradient(rgb(24, 23, 23), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgba(140, 140, 211, 0.199), transparent);
+    top: 0;
+}
+
+.scrolled {
+    background-color: rgba(176, 212, 247, 0.603);
+    transition: 0.3s;
+}
+
+.navbarother {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 1000;
+    color: black;
+    background-image: linear-gradient(to right, rgb(140, 140, 211), rgb(236, 137, 24));    
+    top: 0;
 }
 
 .logo {
     text-transform: uppercase;
     cursor: pointer;
-    padding: 15px 30px 0 80px;
+    padding: 1px 30px 0 80px;
 }
 
-.navbar ul {
+.navbarindex ul,
+.navbarother ul {
     list-style: none;
     display: flex;
     padding: 10px;
 }
 
-.navbar ul a {
+.navbarindex ul a {
     text-decoration: none;
-    color: rgb(236, 137, 24);
+    color:  rgb(236, 137, 24);
     padding: 12px;
     font-size: 17px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.navbar ul a:hover {
-    background-color: red;
+.navbarother ul a {
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.navbar ul li:hover ul {
+.navbarindex ul a:hover,
+.navbarother ul a:hover {
+    background-color: rgb(180, 96, 75);
+    border-radius: 10px;
+}
+
+.navbarindex ul li:hover ul,
+.navbarother ul li:hover ul {
     display: block;
 }
 
-.navbar ul ul {
+.navbarindex ul ul,
+.navbarother ul ul {
+    margin-top: 10px;
+    padding: 0;
     display: none;
+    position: absolute;
+    white-space: pre-line;
+    background-color: lavender;
+    border-radius: 25px;
+    opacity: 0.7;
 }
 
 
@@ -130,7 +169,7 @@
     max-width: 700px;
 }*/
 
-.body a, .text a {
+.text a {
     display: inline-block;
     font-size: 1em;
     background: rgb(236, 137, 24);
@@ -143,7 +182,7 @@
     transition: 0.2s;
 }
 
-.body a:hover, .text a:hover {
+.text a:hover {
     letter-spacing: 6px;
 }
 
@@ -189,7 +228,8 @@
 
 .intro {
     position: absolute;
-    top: 800px;
+    top: 765px;
+    font-size: 1.7em;
 }
 
 .img1 {
@@ -198,6 +238,20 @@
     left: 0;
     padding: 0;
     /* overflow: auto; */
+    height: 500px;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.img2 {
+    position: absolute;
+    top: 900px;
+    left: 700px;
+    padding: 0;
+    /* overflow: auto; */
+    height: 500px;
+    justify-content: space-around;
+    padding: 30px;
 }
 
 .img1::after {
@@ -212,21 +266,27 @@
 
 .projectsheader {
     position: absolute;
-    top: 1650px;
+    display: block;
+    top: 1450px;
+    /* padding: 50px; */
     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .projects {
     position: absolute;
-    top: 1800px;
+    top: 1600px;
     display: flex;
     padding: 50px;
     text-align: center;
 }
 
-/* Features */
+/* About */
 
-.body a {
+
+
+.spacingbutton a {
     display: inline-block;
     font-size: 1em;
     background: rgb(236, 137, 24);
@@ -239,39 +299,89 @@
     transition: 0.2s;
 }
 
-.body a:hover {
+.spacingbutton a:hover {
     letter-spacing: 6px;
+}
+
+.aboutintro {
+    position: absolute;
+    top: 220px;
+    padding: 30px 50px;
+    border-radius: 25px;
+    background-color: rgba(170, 183, 228, 0.589);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    width: 90%;
 }
 
 .team {
     position: absolute;
-    top: 800px;
+    top: 550px;
+    background-color: rgb(255, 255, 255);
+}
+
+.teamtoprow {
+    top: 650px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.teambottomrow {
+    top: 1650px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+}
+
+.isis, .jen, .sarah, .ngoc, .dan {
+    margin: 20px;
+    padding: 15px;
+    width: 430px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);    
 }
 
 .team img {
     height: 400px;
+    justify-content: space-around;
 }
 
 /* Volunteering */
 
 
 
-
-.footer {
+.footerindex {
     position: absolute;
+    top: 2000px;
     display: flex;
-    top: 2200px;
     background: black;
     padding: 10px 100px;
     left: 0;
     width: 100%;
+    background-color: rgb(0, 0, 0);
 }
 
-/* .footer .footerlogo {
-    padding-right: 40%;
-} */ 
+.footerabout {
+    position: absolute;
+    top: 2500px;
+    display: flex;
+    background: black;
+    padding: 10px 100px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
 
-.footer .footercontactus {
+.footerindex .footercontactus,
+.footerabout .footercontactus {
     align-items: center;
     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
