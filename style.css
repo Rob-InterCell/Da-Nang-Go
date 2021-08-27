@@ -284,8 +284,6 @@
 
 /* About */
 
-
-
 .spacingbutton a {
     display: inline-block;
     font-size: 1em;
@@ -354,7 +352,21 @@
 
 /* Volunteering */
 
+.volintro {
+    position: absolute;
+    top: 220px;
+    padding: 30px 50px;
+    border-radius: 25px;
+    background-color: rgba(170, 183, 228, 0.589);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    width: 90%;
+}
 
+.volbody {
+    position: relative;
+    top: 450px;
+}
 
 .footerindex {
     position: absolute;
@@ -378,8 +390,20 @@
     background-color: rgb(0, 0, 0);
 }
 
+.footerother {
+    position: absolute;
+    top: 1400px;
+    display: flex;
+    background: black;
+    padding: 10px 100px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
 .footerindex .footercontactus,
-.footerabout .footercontactus {
+.footerabout .footercontactus,
+.footerother .footercontactus {
     align-items: center;
     text-align: center;
     margin-left: 25%;
